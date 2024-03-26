@@ -1,74 +1,91 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Button Types</title>
-    <style>
-        body {
-            background-color: black;
-            background-image: url('image.jpeg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .button {
-            background-color: #000000;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            width: 250px;
-        }
-
-        .centered-table {
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
-</head>
-<body>
-
-<div id="buttonContainer"></div>
-
-<script>
-    // Array of objects, each containing the name of the engineering discipline and the corresponding URL
-    const engineeringDisciplines = [
-        { name: "COMPUTER HARDWARE ENGINEERING", url: "https://www.google.com/maps/dir/10.7623491,76.6947919/10.7622272,76.6942638/@10.7619092,76.6931599,352m/data=!3m1!1e3!4m6!4m5!1m1!4e1!1m1!4e1!3e2?entry=ttu"},
-        { name: "ELECTRICAL AND ELECTRONICS ENGINEERING", url: "https://maps.app.goo.gl/gpxR5P2icQfUWTaZ8" },
-        { name: "MECHANICAL ENGINEERING", url: "#" },
-        { name: "INSTRUMENTATION ENGINEERING", url: "https://maps.app.goo.gl/zzbjX8GoopBZLH9y6" },
-        { name: "ELECTRONICS ENGINEERING", url: "https://maps.app.goo.gl/5AiNcyAgUE5WioBy5" },
-        { name: "CIVIL ENGINEERING", url: "#" }
-    ];
-
-    function createButtons() {
-        const container = document.getElementById('buttonContainer');
-        const table = document.createElement('table');
-        table.className = 'centered-table';
-
-        engineeringDisciplines.forEach(discipline => {
-            const tr = document.createElement('tr');
-            const td = document.createElement('td');
-            const a = document.createElement('a');
-            a.href = discipline.url;
-            a.className = 'button';
-            a.textContent = discipline.name;
-
-            td.appendChild(a);
-            tr.appendChild(td);
-            table.appendChild(tr);
-        });
-
-        container.appendChild(table);
+  <title>Button Types</title>
+  <style>
+    body {
+      background-color: black; /* Setting the background color to black */
+      background-image: url('images.jpeg'); /* Adding the background image */
+      background-size: cover; /* Ensuring the background covers the whole page */
+      background-position: center; /* Centering the background image */
     }
 
-    // Call createButtons on page load
-    window.onload = createButtons;
-</script>
+    .button {
+      background-color: #000000; /* black*/
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      width: 250px; /* Fixed width to ensure all buttons have the same length */
+    }
 
+    .button1 {
+      background-color: white; 
+      color: black; 
+      border: 2px solid #04AA6D;
+    }
+
+    /* Centering the table on the page */
+    .centered-table {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <!-- Creating a table to align buttons -->
+  <table class="centered-table">
+    <tr>
+      <td><a href="https://www.google.com/maps/dir/Main+gate+Govt+Polytechnic+College,+Kallingal+-+Marutharoad+Road,+Kodumba,+Palakkad,+Kerala/10.7622272,76.6942638/@10.7623349,76.6938366,352m/data=!3m2!1e3!4b1!4m10!4m9!1m5!1m1!1s0x3ba86d632ae722b7:0xf614c540aefed91c!2m2!1d76.6947919!2d10.7623491!1m1!4e1!3e2?entry=ttu" class="button">COMPUTER HARDWARE ENGINEERING</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.google.com/maps/dir/Main+gate+Govt+Polytechnic+College,+Kallingal+-+Marutharoad+Road,+Kodumba,+Palakkad,+Kerala/QM6V%2BRFR+Department+of+electrical+and+electronics+engineering,+Kodumba,+Palakkad,+Kerala+678007/@10.7623425,76.6931751,352m/data=!3m2!1e3!4b1!4m14!4m13!1m5!1m1!1s0x3ba86d632ae722b7:0xf614c540aefed91c!2m2!1d76.6947919!2d10.7623491!1m5!1m1!1s0x3ba86d007e843d79:0x3d21894f95aeb3ce!2m2!1d76.6936319!2d10.7620943!3e2!5m1!1e4?entry=ttu" class="button">ELECTRICAL AND ELECTRONICS ENGINEERING</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.google.com/maps/dir/Main+gate+Govt+Polytechnic+College,+Kallingal+-+Marutharoad+Road,+Kodumba,+Palakkad,+Kerala/Mechanical+Engineering+Block/@10.7621129,76.6934736,176m/data=!3m1!1e3!4m14!4m13!1m5!1m1!1s0x3ba86d632ae722b7:0xf614c540aefed91c!2m2!1d76.6947919!2d10.7623491!1m5!1m1!1s0x3ba86d97cae405db:0xc740efdeaae6bcbe!2m2!1d76.6935205!2d10.7621418!3e2!5m1!1e4?entry=ttu" class="button">MECHANICAL ENGINEERING</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.google.com/maps/dir/Main+gate+Govt+Polytechnic+College,+Kallingal+-+Marutharoad+Road,+Kodumba,+Palakkad,+Kerala/10.7625421,76.693776/@10.7624574,76.6936947,140m/data=!3m1!1e3!4m10!4m9!1m5!1m1!1s0x3ba86d632ae722b7:0xf614c540aefed91c!2m2!1d76.6947919!2d10.7623491!1m1!4e1!3e2?entry=ttu" class="button">INSTRUMENTATION ENGINEERING</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.google.com/maps/dir/Main+gate+Govt+Polytechnic+College,+Kallingal+-+Marutharoad+Road,+Kodumba,+Palakkad,+Kerala/10.7626448,76.6935584/@10.7625309,76.6933266,352m/data=!3m2!1e3!4b1!4m10!4m9!1m5!1m1!1s0x3ba86d632ae722b7:0xf614c540aefed91c!2m2!1d76.6947919!2d10.7623491!1m1!4e1!3e2?entry=ttu" class="button">ELECTRONICS ENGINEERING</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.google.com/maps/dir/Main+gate+Govt+Polytechnic+College,+Kallingal+-+Marutharoad+Road,+Kodumba,+Palakkad,+Kerala/10.7649808,76.6936885/@10.7642772,76.6922423,704m/data=!3m2!1e3!4b1!4m10!4m9!1m5!1m1!1s0x3ba86d632ae722b7:0xf614c540aefed91c!2m2!1d76.6947919!2d10.7623491!1m1!4e1!3e2?entry=ttu" class="button">CIVIL ENGINEERING</a></td>
+    </tr>
+     <tr>
+      <td><a href="https://www.google.com/maps/dir/Main+gate+Govt+Polytechnic+College,+Kallingal+-+Marutharoad+Road,+Kodumba,+Palakkad,+Kerala/10.7624466,76.6940999/@10.7624081,76.6938129,176m/data=!3m2!1e3!4b1!4m10!4m9!1m5!1m1!1s0x3ba86d632ae722b7:0xf614c540aefed91c!2m2!1d76.6947919!2d10.7623491!1m1!4e1!3e2?entry=ttu" class="button">OPEN AUDITORIUM </a></td>
+    </tr>
+    
+     <tr>
+      <td><a href="https://www.google.com/maps/dir/Main+gate+Govt+Polytechnic+College,+Kallingal+-+Marutharoad+Road,+Kodumba,+Palakkad,+Kerala/10.7630513,76.6935799/@10.7626736,76.6915443,704m/data=!3m2!1e3!4b1!4m10!4m9!1m5!1m1!1s0x3ba86d632ae722b7:0xf614c540aefed91c!2m2!1d76.6947919!2d10.7623491!1m1!4e1!3e2?entry=ttu" class="button">LIBRARY BLOCK</a></td>
+    </tr>
+   
+    <tr>
+      <td><a href="https://www.google.com/maps/dir/Main+gate+Govt+Polytechnic+College,+Kallingal+-+Marutharoad+Road,+Kodumba,+Palakkad,+Kerala/10.7621574,76.6942658/@10.762295,76.6938958,176m/data=!3m2!1e3!4b1!4m10!4m9!1m5!1m1!1s0x3ba86d632ae722b7:0xf614c540aefed91c!2m2!1d76.6947919!2d10.7623491!1m1!4e1!3e2?entry=ttu" class="button">BYTE BUZTERS </a></td>
+    </tr>
+    
+     <tr>
+      <td><a href="https://www.google.com/maps/dir/Main+gate+Govt+Polytechnic+College,+Kallingal+-+Marutharoad+Road,+Kodumba,+Palakkad,+Kerala/10.7618731,76.6933643/@10.7622232,76.69274,352m/data=!3m2!1e3!4b1!4m10!4m9!1m5!1m1!1s0x3ba86d632ae722b7:0xf614c540aefed91c!2m2!1d76.6947919!2d10.7623491!1m1!4e1!3e2?entry=ttu" class="button">CANTEEN</a></td>
+    </tr>
+    tr>
+      <td><a href="https://www.google.com/maps/dir/Main+gate+Govt+Polytechnic+College,+Kallingal+-+Marutharoad+Road,+Kodumba,+Palakkad,+Kerala/10.7625233,76.6938444/@10.7624653,76.6930414,352m/data=!3m2!1e3!4b1!4m10!4m9!1m5!1m1!1s0x3ba86d632ae722b7:0xf614c540aefed91c!2m2!1d76.6947919!2d10.7623491!1m1!4e1!3e2?entry=ttu" class="button">CCF</a></td>
+    </tr>
+      tr>
+      <td><a href="https://www.google.com/maps/dir/Main+gate+Govt+Polytechnic+College,+Kallingal+-+Marutharoad+Road,+Kodumba,+Palakkad,+Kerala/10.7619354,76.6935949/@10.7622544,76.6929166,352m/data=!3m2!1e3!4b1!4m10!4m9!1m5!1m1!1s0x3ba86d632ae722b7:0xf614c540aefed91c!2m2!1d76.6947919!2d10.7623491!1m1!4e1!3e2?entry=ttu" class="button">NCC</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.google.com/maps/dir/Main+gate+Govt+Polytechnic+College,+Kallingal+-+Marutharoad+Road,+Kodumba,+Palakkad,+Kerala/10.7617754,76.6935855/@10.7618381,76.6932342,86m/data=!3m1!1e3!4m10!4m9!1m5!1m1!1s0x3ba86d632ae722b7:0xf614c540aefed91c!2m2!1d76.6947919!2d10.7623491!1m1!4e1!3e2?entry=ttu" class="button">NSS</a></td>
+    </tr>
+  </table>
+  <br>
+ 
 </body>
 </html>
